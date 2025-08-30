@@ -1,16 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avatars 과제</title>
-  <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
-  <link rel="icon" href="/src/assets/favicon/likelion.svg" />
-  <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css">
-  <link rel="stylesheet" href="./styles/avatars.css" />
-</head>
-<body>
-  <!-- 여기에 마크업을 구성해 주세요. -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avatars 과제</title>
+    <link rel="shortcut icon" href="/src/assets/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/src/assets/favicon/likelion.svg" />
+    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT-Regular.woff2" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css" />
+    <link rel="stylesheet" href="./styles/avatars.css" />
+  </head>
+  <body>
+    <h1>Avatars</h1>
+
+    <ul class="avatar">
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face1.webp" type="image/webp" />
+          <img src="./images/face1-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-1" aria-describedby="avatar__status-1" />
+        </picture>
+        <span id="avatar__name-1" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-1" class="sr-only">오프라인</span>
+        <span class="avatar__status" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face2.webp" type="image/webp" />
+          <img src="./images/face2-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-2" aria-describedby="avatar__status-2" />
+        </picture>
+        <span id="avatar__name-2" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-2" class="sr-only">온라인</span>
+        <span class="avatar__status avatar__status--online" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face3.webp" type="image/webp" />
+          <img src="./images/face3-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-3" aria-describedby="avatar__status-3" />
+        </picture>
+        <span id="avatar__name-3" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-3" class="sr-only">오프라인</span>
+        <span class="avatar__status" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face4.webp" type="image/webp" />
+          <img src="./images/face4-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-4" aria-describedby="avatar__status-4" />
+        </picture>
+        <span id="avatar__name-4" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-4" class="sr-only">온라인</span>
+        <span class="avatar__status avatar__status--online" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face5.webp" type="image/webp" />
+          <img src="./images/face5-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-5" aria-describedby="avatar__status-5" />
+        </picture>
+        <span id="avatar__name-5" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-5" class="sr-only">온라인</span>
+        <span class="avatar__status avatar__status--online" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face6.webp" type="image/webp" />
+          <img src="./images/face6-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-6" aria-describedby="avatar__status-6" />
+        </picture>
+        <span id="avatar__name-6" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-6" class="sr-only">온라인</span>
+        <span class="avatar__status avatar__status--online" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face7.webp" type="image/webp" />
+          <img src="./images/face7-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-7" aria-describedby="avatar__status-7" />
+        </picture>
+        <span id="avatar__name-7" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-7" class="sr-only">오프라인</span>
+        <span class="avatar__status" aria-hidden="true"></span>
+      </li>
+      <li class="avatar__item">
+        <picture>
+          <source srcset="./images/face8.webp" type="image/webp" />
+          <img src="./images/face8-64.jpg" alt="아바타 사진" aria-labelledby="avatar__name-8" aria-describedby="avatar__status-8" />
+        </picture>
+        <span id="avatar__name-8" class="sr-only">아바타 이름</span>
+        <span id="avatar__status-8" class="sr-only">오프라인</span>
+        <span class="avatar__status" aria-hidden="true"></span>
+      </li>
+    </ul>
+  </body>
 </html>
