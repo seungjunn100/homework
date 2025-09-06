@@ -1,1 +1,243 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+/* SpoqaHanSans 폰트 */
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+
+:root {
+  --white: #fff;
+  --red: #FF1414;
+  --green: #03CF5D;
+  --gray: #999;
+  --black: #333;
+
+  --text-color: var(--black);
+  --accent-color: var(--red);
+  --primary-color: var(--green);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 사이트 로고 */
+.site-logo {
+  margin: 100px 0 50px;
+  font-size: 0;
+  text-align: center;
+
+  a {
+    display: inline-block;
+  }
+}
+
+/* 로그인 폼 */
+.login-form {
+  padding: 0 15px;
+
+  @media (min-width: 769px) {
+    inline-size: 460px;
+    margin: 0 auto;
+  }
+}
+
+/* 로그인 입력 서식 */
+.input {
+  margin-block-end: 10px;
+
+  input {
+    inline-size: 100%;
+    padding: 0 14px;
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 46px;
+    border: 1px solid #dadada;
+    outline: 0;
+
+    &:focus {
+      background-color: #ebf5ff;
+      border: 1px solid var(--primary-color);
+    }
+
+    &:not(:placeholder-shown):invalid:not(:focus) + strong {
+      display: block;
+    }
+  }
+
+  strong {
+    display: none;
+    margin-block-start: 5px;
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+/* 로그인 버튼 */
+.login-button {
+  inline-size: 100%;
+  margin-block-start: 10px;
+  padding: 14px 0 16px;
+  color: var(--white);
+  font-size: 16px;
+  background: var(--primary-color);
+  border: none;
+}
+
+/* 로그인 상태 유지, IP 보안 */
+.login-option {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  margin-block-start: 10px;
+
+  .keep-check {
+    position: relative;
+    padding-left: 30px;
+
+    label {
+      display: block;
+      color: var(--text-color);
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .keep-status {
+
+    input {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      translate: 0 -50%;
+      margin: 0;
+      width: 24px;
+      height: 24px;
+      border: none;
+      appearance: none;
+      z-index: 10;
+
+      &:checked {
+
+        &~.status-unchecked {
+          opacity: 0;
+        }
+
+        &~.status-checked {
+          opacity: 1;
+        }
+      }
+
+      &:focus {
+
+        &~svg {
+          outline: 2px solid var(--black);
+          border-radius: 3px;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      translate: 0 -50%;
+
+      &.status-checked {
+        opacity: 0;
+      }
+
+      &.status-unchecked {
+        opacity: 1;
+      }
+    }
+  }
+
+  .ip-check {
+    position: relative;
+    display: none;
+
+    .go-check {
+      display: block;
+      color: var(--text-color);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .ip-switch {
+
+      input {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        translate: 0 -50%;
+        margin: 0;
+        width: 1px;
+        height: 1px;
+        z-index: -1;
+        
+        &:checked ~ label {
+          padding: 0 24px 0 0;
+        }
+        
+        &:checked ~ label .on {
+          display: block;
+          color: var(--primary-color);
+        }
+        
+        &:checked ~ label .off {
+          display: none;
+        }
+
+        &:focus ~ label span {
+          outline: 2px solid var(--black);
+          border-radius: 3px;
+        }
+      }
+
+      label {
+        display: block;
+        padding: 0 30px 0 0;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        translate: 0 -50%;
+        color: var(--gray);
+        font-size: 14px;
+        font-weight: 500;
+        background: var(--white);
+
+        &.on {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    justify-content: space-between;
+
+    .ip-check {
+      display: flex;
+    }
+  }
+}
